@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
     <title>Understanding HTML</title>
     <script src="main-code.js"></script>
+    <script src="obj-orienated.js"></script>
     <link href="main-styles.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
+
+<h1><script>document.write(mySiteConfig.homePage.title)</script></h1>
 <p id="first" class="first-paragraph">Hello World This is HTML</p>
+<p id="test1">TEST Color</p>
+<p id="test2">1</p>
+<p id="test3">1</p>
 
 <p class="second-paragraph">Hello World This is HTML</p>
 
 <button onClick="toggleColor()" >test</button>
+
+<button onclick="mySiteConfig.changeColor('test1')" >Change Test Color</button>
+
+<button onclick="document.getElementById('test2').innerText = mySiteConfig.addOne(Number(document.getElementById('test2').innerText))" >Add one to test 2</button>
+
+<button onclick="mySiteConfig.automaticAddOne('test3')" >Automatic Add one to test 2</button>
 
 </body>
 </html>
